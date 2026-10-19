@@ -22,6 +22,16 @@ const PROJECTS: Record<string, ProjectData> = {
   },
 };
 
+let activeMountFn: ((id: string) => void) | null = null;
+
+export function mountProject(id: string): boolean {
+  if (activeMountFn && PROJECTS[id]) {
+    activeMountFn(id);
+    return true;
+  }
+  return false;
+}
+
 export function initProjects(): void {
   const cards = document.querySelectorAll<HTMLElement>('.project-card');
   const iframe = document.getElementById('monitorIframe') as HTMLIFrameElement | null;
@@ -66,6 +76,8 @@ export function initProjects(): void {
       shield.classList.remove('is-unlocked');
     }
   }
+
+  activeMountFn = setProject;
 
   cards.forEach((card) => {
     card.addEventListener('click', () => {

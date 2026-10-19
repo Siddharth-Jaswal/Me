@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/avatar.png" />
+    <link rel="apple-touch-icon" href="/avatar.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Siddharth Jaswal — Cyber Bento Interactive Portfolio" />
+    <title>Siddharth Jaswal // Portfolio</title>
+  </head>
+  <body>
+    <!-- Interactive Neural Synapse Canvas -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Visual Polish: Vignette & Cyber Sub-Grid -->
+    <div class="vignette-overlay"></div>
+    <div class="grid-overlay"></div>
+
+    <!-- Portfolio App Container -->
+    <div id="app">
+      <main class="bento-grid">
+        <!-- Tile 1: Hero Identity -->
+        <article class="bento-tile bento-hero">
+          <h1 class="hero-name">
+            <span class="name-first">Hy,</span>
+            <span class="name-last">fellow visitor</span>
+          </h1>
+
+          <p class="hero-tagline">
+            <span>I do</span>
+            <span class="tag-tech tag-software">software</span>
+            <span>and</span>
+            <span class="tag-tech tag-ai">AI</span><span class="tagline-comma">,</span>
+            <span class="tagline-mystery">but that’s not it !</span>
+            <span class="typing-blink">_</span>
+          </p>
+        </article>
+
+        <!-- Tile 2: Identity & Avatar Hologram -->
+        <article class="bento-tile bento-profile">
+          <div class="avatar-holo-box">
+            <div class="holo-ring"></div>
+            <div class="avatar-inner">
+              <img src="/avatar.png" alt="Siddharth Jaswal" class="avatar-img" />
+            </div>
+            <div class="rotating-stamp">
+              <svg viewBox="0 0 100 100">
+                <path id="stampPath" d="M 50,50 m -37,0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" fill="transparent" />
+                <text>
+                  <textPath href="#stampPath" textLength="218" lengthAdjust="spacing">✦ I THINK | THEREFORE I AM • </textPath>
+                </text>
+              </svg>
+            </div>
+          </div>
+
+          <div class="profile-info">
+            <h2 class="profile-title">Siddharth Jaswal</h2>
+          </div>
+
+          <div class="social-dock">
+            <a href="https://linkedin.com/in/siddharth-jaswal-b4903a2b7" target="_blank" rel="noreferrer" class="dock-btn dock-linkedin" title="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </a>
+            <a href="https://github.com/Siddharth-Jaswal" target="_blank" rel="noreferrer" class="dock-btn dock-github" title="GitHub">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+              </svg>
+            </a>
+            <a href="https://leetcode.com/u/Siddharth_Jaswal" target="_blank" rel="noreferrer" class="dock-btn dock-leetcode" title="LeetCode">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .666-1.607L9.36 7.87l4.124-4.417a1.376 1.376 0 0 0-.001-1.953 1.368 1.368 0 0 0-.961-.438zM14.28 10.963a1.376 1.376 0 0 0-1.376 1.376v.056c0 .76.616 1.376 1.376 1.376h6.732a1.376 1.376 0 0 0 1.376-1.376v-.056a1.376 1.376 0 0 0-1.376-1.376h-6.732z"/>
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Tile 3: Live "Now Playing" Widget -->
+        <article class="bento-tile bento-music" title="Click to play / pause music">
+          <div class="music-header">
+            <span class="music-tag">CLICK TO PLAY ▶</span>
+            <div class="equalizer">
+              <span class="eq-bar"></span>
+              <span class="eq-bar"></span>
+              <span class="eq-bar"></span>
+              <span class="eq-bar"></span>
+            </div>
+          </div>
+
+          <div class="track-card">
+            <div class="vinyl-disc">
+              <div class="vinyl-center">
+                <span class="play-pause-icon">▶</span>
+              </div>
+            </div>
+            <div class="track-details">
+              <span class="track-name">Midnight Static</span>
+              <span class="artist-name">Chill Lo-Fi • Click to Play</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Tile 4: Interactive Micro-Terminal -->
+        <article class="bento-tile bento-terminal" id="terminalTile">
+          <div class="terminal-header">
+            <div class="term-window-dots">
+              <span class="w-dot dot-red"></span>
+              <span class="w-dot dot-yellow"></span>
+              <span class="w-dot dot-green"></span>
+            </div>
+            <span class="term-title">guest@dev:~$</span>
+            <span class="term-status-badge">ONLINE</span>
+          </div>
+
+          <div class="terminal-body" id="terminalBody">
+            <div class="terminal-logs" id="terminalLogs">
+              <div class="term-line term-intro">type <span class="term-cyan">'hy'</span> to begin <span class="typing-blink">_</span></div>
+            </div>
+            <form class="terminal-input-row" id="terminalForm" autocomplete="off">
+              <span class="term-prompt">❯</span>
+              <div class="term-input-wrapper">
+                <input type="text" id="terminalInput" class="term-input" placeholder="type 'hy'..." spellcheck="false" autocomplete="off" />
+                <span id="terminalGhost" class="term-ghost" aria-hidden="true"></span>
+              </div>
+            </form>
+          </div>
+        </article>
+      </main>
+
+      <!-- Projects Section: The Master Holo-Deck -->
+      <section class="projects-section" id="projectsSection">
+        <div class="projects-header">
+          <h2 class="projects-title">Projects</h2>
+        </div>
+
+        <div class="projects-studio">
+          <!-- Left Column: Project Selector Reel -->
+          <div class="projects-reel" id="projectReel">
+            <!-- Project 1: CodeArena -->
+            <article class="project-card is-active" data-project-id="codearena" tabindex="0">
+              <div class="project-card-header">
+                <h3 class="project-name">CodeArena</h3>
+                <a href="https://coding-arena-lovat.vercel.app" target="_blank" rel="noreferrer" class="ext-link-btn" title="Open hosted site" onclick="event.stopPropagation()">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
+              </div>
+              <p class="project-desc">Production-ready, multiplayer competitive programming platform designed for software engineers, competitive coders, and technical interview candidates.</p>
+              <div class="project-tech-chips">
+                <span class="tech-chip">Next.js</span>
+                <span class="tech-chip">WebSockets</span>
+                <span class="tech-chip">Code Execution</span>
+              </div>
+            </article>
+
+            <!-- Project 2: AutoML Copilot -->
+            <article class="project-card" data-project-id="automl" tabindex="0">
+              <div class="project-card-header">
+                <h3 class="project-name">AutoML Copilot</h3>
+                <a href="https://auto-ml-weld.vercel.app/" target="_blank" rel="noreferrer" class="ext-link-btn" title="Open hosted site" onclick="event.stopPropagation()">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
+              </div>
+              <p class="project-desc">AI-powered Data Science Copilot automating EDA, preprocessing, feature engineering, and visualization for tabular datasets with natural language reasoning.</p>
+              <div class="project-tech-chips">
+                <span class="tech-chip">Python / ML</span>
+                <span class="tech-chip">AI Copilot</span>
+                <span class="tech-chip">EDA Automation</span>
+              </div>
+            </article>
+
+            <!-- Project 3: MediRemind -->
+            <article class="project-card" data-project-id="mediremind" tabindex="0">
+              <div class="project-card-header">
+                <h3 class="project-name">MediRemind</h3>
+                <a href="https://medi-remind-frontend-silk.vercel.app/" target="_blank" rel="noreferrer" class="ext-link-btn" title="Open hosted site" onclick="event.stopPropagation()">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
+              </div>
+              <p class="project-desc">AI-powered prescription reminder system extracting medicines and dosage schedules from prescription images with automated Telegram reminders.</p>
+              <div class="project-tech-chips">
+                <span class="tech-chip">Vision AI</span>
+                <span class="tech-chip">Prescription OCR</span>
+                <span class="tech-chip">Telegram Bot</span>
+              </div>
+            </article>
+          </div>
+
+          <!-- Right Column: Sticky Master Holo-Monitor -->
+          <div class="master-monitor-wrap">
+            <div class="master-monitor" id="masterMonitor">
+              <!-- Monitor Topbar -->
+              <div class="monitor-topbar">
+                <div class="monitor-dots">
+                  <span class="m-dot dot-red"></span>
+                  <span class="m-dot dot-yellow"></span>
+                  <span class="m-dot dot-green"></span>
+                </div>
+                <div class="monitor-url-bar">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="lock-icon"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                  <span id="monitorUrlText">https://coding-arena-lovat.vercel.app</span>
+                </div>
+                <div class="monitor-actions">
+                  <button type="button" class="monitor-btn" id="monitorRefreshBtn" title="Reload iframe">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg>
+                  </button>
+                  <a id="monitorExtLink" href="https://coding-arena-lovat.vercel.app" target="_blank" rel="noreferrer" class="monitor-btn" title="Open fullscreen in new tab">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Monitor Screen -->
+              <div class="monitor-screen" id="monitorScreen">
+                <iframe id="monitorIframe" src="https://coding-arena-lovat.vercel.app" title="Live Project View" loading="lazy"></iframe>
+                <div class="monitor-scanlines"></div>
+                <div class="monitor-interact-shield" id="monitorShield">
+                  <button type="button" class="interact-unlock-btn" id="unlockInteractBtn">
+                    <span>Click to Interact Live</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

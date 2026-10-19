@@ -1,3 +1,5 @@
+import { mountProject } from './projects-controller';
+
 export function initTerminal(): void {
   const form = document.getElementById('terminalForm') as HTMLFormElement | null;
   const input = document.getElementById('terminalInput') as HTMLInputElement | null;
@@ -7,7 +9,7 @@ export function initTerminal(): void {
 
   if (!form || !input || !logs) return;
 
-  const COMMANDS = ['hy', 'projects', 'philosophy', 'cat', 'about', 'clear', 'help'];
+  const COMMANDS = ['hy', 'projects', 'codearena', 'automl', 'mediremind', 'philosophy', 'cat', 'about', 'clear', 'help'];
   const history: string[] = [];
   let historyIndex = -1;
   let currentSuggestion = '';
@@ -83,7 +85,10 @@ export function initTerminal(): void {
         appendLine(
           `<span class="term-hl">COMMANDS:</span><br>` +
           `• <span class="term-cyan">hy</span>           — Say hello<br>` +
-          `• <span class="term-cyan">projects</span>     — Active builds &amp; experiments<br>` +
+          `• <span class="term-cyan">projects</span>     — Deployed systems &amp; scroll to deck<br>` +
+          `• <span class="term-cyan">codearena</span>    — Mount CodeArena in Holo-Deck<br>` +
+          `• <span class="term-cyan">automl</span>       — Mount AutoML Copilot in Holo-Deck<br>` +
+          `• <span class="term-cyan">mediremind</span>   — Mount MediRemind in Holo-Deck<br>` +
           `• <span class="term-cyan">philosophy</span>   — Core ethos &amp; Descartes axiom<br>` +
           `• <span class="term-cyan">cat</span>          — Secret feline companion<br>` +
           `• <span class="term-cyan">about</span>        — Siddharth in a nutshell<br>` +
@@ -93,11 +98,35 @@ export function initTerminal(): void {
 
       case 'projects':
         appendLine(
-          `<span class="term-hl">FEATURED BUILDS:</span><br>` +
-          `🌌 <span class="term-cyan">Neural Canvas</span> — Physics mesh &amp; audio DSP (live)<br>` +
-          `🧠 <span class="term-cyan">Agentic Mesh</span> — Multi-model reasoning architecture<br>` +
-          `⚡ <span class="term-cyan">Hyper CLI</span> — Ultra-fast minimalist developer tooling`
+          `<span class="term-hl">DEPLOYED SYSTEMS:</span><br>` +
+          `01 // <span class="term-cyan">CodeArena</span> — Multiplayer competitive coding platform<br>` +
+          `02 // <span class="term-cyan">AutoML Copilot</span> — AI-powered data science &amp; EDA copilot<br>` +
+          `03 // <span class="term-cyan">MediRemind</span> — Vision AI prescription reminder &amp; bot<br>` +
+          `<span class="term-muted">Tip: Type 'codearena', 'automl', or 'mediremind' to mount.</span>`
         );
+        document.getElementById('projectsSection')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        break;
+
+      case 'codearena':
+      case '1':
+        mountProject('codearena');
+        appendLine(`<span class="term-cyan">✓ Mounted CodeArena</span> onto the Holo-Deck.`);
+        document.getElementById('projectsSection')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        break;
+
+      case 'automl':
+      case 'automl copilot':
+      case '2':
+        mountProject('automl');
+        appendLine(`<span class="term-cyan">✓ Mounted AutoML Copilot</span> onto the Holo-Deck.`);
+        document.getElementById('projectsSection')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        break;
+
+      case 'mediremind':
+      case '3':
+        mountProject('mediremind');
+        appendLine(`<span class="term-cyan">✓ Mounted MediRemind</span> onto the Holo-Deck.`);
+        document.getElementById('projectsSection')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
         break;
 
       case 'philosophy':
